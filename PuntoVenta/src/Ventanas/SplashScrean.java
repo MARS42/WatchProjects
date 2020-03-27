@@ -21,7 +21,8 @@ public class SplashScrean extends javax.swing.JFrame implements Conectar{
     }
     //Medoto para mandar al login despues de que termine la carga 
     public  void login(){
-        c.getConnection();
+         new Login().setVisible(true);
+         this.dispose();
     }
     //Comienza el conteo
 public void comenzar(){time.start();
@@ -68,6 +69,8 @@ class timerListener implements ActionListener{
         progreso.setBackground(new java.awt.Color(255, 153, 0));
         progreso.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         progreso.setForeground(new java.awt.Color(255, 204, 102));
+        progreso.setBorderPainted(false);
+        progreso.setOpaque(true);
         getContentPane().add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 390, 110));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N

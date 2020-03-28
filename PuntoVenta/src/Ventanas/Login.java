@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame implements Conectar{
 
-
+boolean desbloquear=false;
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -35,7 +35,15 @@ public void Login(){
         Query sql=new Query();
         ArrayList<String> datos=  sql.Select("select usarName,password from usuarios where usarName='"+getUsuario()+"';", 2);
      if(datos.get(0).equals(getUsuario())&& datos.get(1).equals(getPass())){
-         JOptionPane.showMessageDialog(this, "Iguales");
+        desbloquear=true;
+          /* AnimationClass internet= new AnimationClass();
+        internet.(-40, 10, 10, 5, JLInternet);
+        //<---
+        AnimationClass internett= new AnimationClass();
+        internett.jLabelXLeft(10, -40, 10, 5, JLInternet);*/
+          
+     }else{
+         JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecta");
      }
              
     }catch(Exception e){
@@ -194,6 +202,9 @@ public void Login(){
             }
         });
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel8MouseExited(evt);
             }
@@ -214,6 +225,9 @@ public void Login(){
             }
         });
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel11MouseExited(evt);
             }
@@ -228,6 +242,9 @@ public void Login(){
             }
         });
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel12MouseExited(evt);
             }
@@ -248,6 +265,9 @@ public void Login(){
             }
         });
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel14MouseExited(evt);
             }
@@ -274,6 +294,9 @@ public void Login(){
             }
         });
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel17MouseExited(evt);
             }
@@ -409,6 +432,53 @@ public void Login(){
            Login();
        }
     }//GEN-LAST:event_txtPasswordKeyPressed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        //Producto  esto es como un boton  pero es un label
+        if(desbloquear){
+            //abrir una nueva ventana 
+        }else{
+            JOptionPane.showMessageDialog(this, "Primero debe de entrar con usuario valido");
+        }
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+      if(desbloquear){
+            //abrir una nueva ventana 
+        }else{
+            JOptionPane.showMessageDialog(this, "Primero debe de entrar con usuario valido");
+        }
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // TODO add your handling code here:
+        
+         if(desbloquear){
+            //abrir una nueva ventana 
+       }else{
+            JOptionPane.showMessageDialog(this, "Primero debe de entrar con usuario valido");
+        }
+    }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+        
+         if(desbloquear){
+            //abrir una nueva ventana 
+       }else{
+            JOptionPane.showMessageDialog(this, "Primero debe de entrar con usuario valido");
+        }
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+         if(desbloquear){
+            //abrir una nueva ventana 
+       }else{
+            JOptionPane.showMessageDialog(this, "Primero debe de entrar con usuario valido");
+        }
+    }//GEN-LAST:event_jLabel14MouseClicked
 
     /**
      * @param args the command line arguments
